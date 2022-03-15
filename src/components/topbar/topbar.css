@@ -1,0 +1,106 @@
+.topbar {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 2px solid lightgray;
+}
+
+.topbarWrapper {
+  height: 100%;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topRight {
+  display: flex;
+  align-items: center;
+}
+.topLeft {
+  display: flex;
+}
+
+.topbarIconContainer {
+  position: relative;
+  cursor: pointer;
+  margin-right: 20px;
+  color: #555;
+}
+
+.topIconBadge {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: -5px;
+  right: 0px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+.toggle {
+  position: relative;
+  /* width: 60px; */
+  /* height: 60px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  cursor: pointer;
+}
+
+.headerLinks {
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+.headerItem {
+  margin: 0 2rem;
+  cursor: pointer;
+  color: rgb(119, 101, 101);
+  font-weight: 400;
+  font-size: 23px;
+  position: relative;
+  transition: all 1s;
+}
+.headerItem:hover {
+  color: black;
+}
+
+.headerItem::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 0;
+  background-color: #54dce6;
+  transition: all 1s;
+  transform-origin: left;
+}
+.headerItem:hover::before {
+  width: 100%;
+}
+.topAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: contain;
+}
+@media screen and (max-width: 780px) {
+  .headerLinks {
+    flex-wrap: wrap;
+  }
+}
