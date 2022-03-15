@@ -1,9 +1,14 @@
 import "./table.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getRandomValue } from "../../helpers/timerData";
 export default function WidgetLg() {
-  const Button = ({ type }) => {
-    return <button className={"widgetLgButton " + type}>{type}</button>;
-  };
+  const [randomValue,setRandomValue]=useState(Array.from(Array(4).keys()).map(i=>getRandomValue()))
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setRandomValue(Array.from(Array(4).keys()).map(i=>getRandomValue()));
+    }, 3000);
+    return () => clearTimeout(timer);
+  });
   return (
     <div className="widgetLg">
       <h3 className="widgetLgTitle">Latest transactions</h3>
@@ -20,7 +25,7 @@ export default function WidgetLg() {
             <span className="widgetLgName">David</span>
           </td>
           <td className="widgetLgDate">15 mars 2022</td>
-          <td className="widgetLgAmount">$100.00</td>
+          <td className="widgetLgAmount">${randomValue[0]}</td>
           <td className="widgetLgStatus">
             <Button type="Approved" />
           </td>
@@ -31,7 +36,7 @@ export default function WidgetLg() {
             <span className="widgetLgName">Lidya</span>
           </td>
           <td className="widgetLgDate">15 mars 2022</td>
-          <td className="widgetLgAmount">$122.00</td>
+          <td className="widgetLgAmount">${randomValue[1]}</td>
           <td className="widgetLgStatus">
             <Button type="Declined" />
           </td>
@@ -42,7 +47,7 @@ export default function WidgetLg() {
             <span className="widgetLgName">Jack</span>
           </td>
           <td className="widgetLgDate">15 mars 2022</td>
-          <td className="widgetLgAmount">$65.00</td>
+          <td className="widgetLgAmount">${randomValue[2]}</td>
           <td className="widgetLgStatus">
             <Button type="Pending" />
           </td>
@@ -53,7 +58,7 @@ export default function WidgetLg() {
             <span className="widgetLgName">Tom</span>
           </td>
           <td className="widgetLgDate">14 mars 2022</td>
-          <td className="widgetLgAmount">$175.00</td>
+          <td className="widgetLgAmount">${randomValue[3]}</td>
           <td className="widgetLgStatus">
             <Button type="Approved" />
           </td>
@@ -61,4 +66,9 @@ export default function WidgetLg() {
       </table>
     </div>
   );
+  
+
 }
+const Button = ({ type }) => {
+  return <button className={"widgetLgButton " + type}>{type}</button>;
+};

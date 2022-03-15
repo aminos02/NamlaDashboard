@@ -27,20 +27,7 @@ export const getChartData = (labels) => {
     datasets: [
       {
         label: "Earnings",
-        data: [
-          getRandomValue(),
-          getRandomValue(),
-          560,
-          710,
-          210,
-          getRandomValue(),
-          400,
-          500,
-          450,
-          420,
-          500,
-          602,
-        ],
+        data: Array.from(Array(10).keys()).map(i=>getRandomValue()),
         backgroundColor: [
           "rgba(255, 99, 132, 1)",
           "rgba(54, 162, 235, 1)",
