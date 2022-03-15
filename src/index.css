@@ -5,3 +5,16 @@
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
 }
+body {
+  min-height: 100vh;
+
+  overflow-x: hidden;
+}
+
+:root {
+  --blue: #287bff;
+  --white: #fff;
+  --grey: #f5f5f5;
+  --black1: #222;
+  --black2: #999;
+}

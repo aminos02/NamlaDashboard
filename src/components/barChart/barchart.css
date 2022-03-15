@@ -1,0 +1,27 @@
+.lineChart {
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+.graphBox {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  min-height: 200px;
+}
+.graphBox .box {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}

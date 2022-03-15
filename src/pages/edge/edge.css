@@ -1,0 +1,8 @@
+.edge {
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 200px;
+  min-height: 100vh;
+  background: var(--white);
+  transition: 0.5s;
+}

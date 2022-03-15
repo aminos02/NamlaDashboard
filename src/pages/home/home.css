@@ -1,0 +1,12 @@
+.main {
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 220px;
+  min-height: 100vh;
+  background: var(--white);
+  transition: 0.5s;
+}
+.homeWidgets {
+  display: flex;
+  margin: 20px;
+}
